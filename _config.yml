@@ -23,7 +23,8 @@ baseurl : "/oncodecoded" # does not include hostname
 title   : Cancer and You
 subtitle: Understanding Genetic Mutations & Precision Medicine
 description: > # this means to ignore newlines until "Language & timezone"
-  Understanding how cancer genomics helps personalise treatment.
+  A simple guide to cancer genomics and personalized medicine.
+  Learn how genetic mutations shape treatment and impact prognosis.
 
 
 ## => Language and Timezone
@@ -40,18 +41,27 @@ author:
   url       : https://alaiatai.github.io/oncodecoded/
   avatar    : # path or url of avatar image (square)
   email     : alaiaxtai@gmail.com
-  linkedin  : https://www.linkedin.com/in/alaiatai # "user_name" the last part of your profile url, e.g. https://www.linkedin.com/in/user_name
+  linkedin  : "alaiatai" # "user_name" the last part of your profile url, e.g. https://www.linkedin.com/in/user_name
 
 
 ## => Paths
 ##############################
 paths:
-  root    : # title link url, "/" (default)
-  home    : # home layout url, "/" (default)
-  archive : # "/archive.html" (default)
-  rss     : # "/feed.xml" (default)
-
-
+  home: /
+  about: /about/
+  archive: /archive.html
+  rss: /feed.xml
+  
+## => Navigation (Optional: If you want a top menu)
+##############################
+nav:
+  - title: Home
+    url: /
+  - title: About
+    url: /about/
+  - title: Blog
+    url: /archive.html
+    
 ## => Post
 ##############################
 ## excerpt

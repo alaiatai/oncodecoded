@@ -11,37 +11,104 @@ permalink: /
   <a href="/about/" class="btn">Explore the Science</a>
 </section>
 
+<div class="cursor-glow"></div>
+
 <style>
+/* Full-page animated gradient background */
+body {
+  background: linear-gradient(120deg, #001F3F, #007acc, #00A8E8);
+  background-size: 300% 300%;
+  animation: gradientShift 10s ease infinite;
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Centered homepage content */
 .homepage-intro {
   text-align: center;
-  margin: 120px auto;
   max-width: 650px;
   font-family: "Arial", sans-serif;
+  color: white;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 1s ease-out forwards;
 }
+
+/* Heading animation */
 h1 {
   font-size: 2.8em;
   font-weight: bold;
-  color: #222;
+  opacity: 0;
+  animation: fadeIn 1s ease-out 0.5s forwards;
 }
+
+/* Paragraph animation */
 p {
   font-size: 1.3em;
-  color: #555;
-  line-height: 1.6;
+  opacity: 0;
+  animation: fadeIn 1s ease-out 0.8s forwards;
 }
+
+/* Button styling */
 .btn {
   display: inline-block;
   margin-top: 25px;
   padding: 12px 24px;
-  background-color: #007acc;
+  background-color: rgba(255, 255, 255, 0.2);
   color: white;
   font-size: 1.1em;
   font-weight: bold;
   text-decoration: none;
   border-radius: 8px;
+  backdrop-filter: blur(10px);
   transition: background 0.3s ease, transform 0.2s ease;
+  opacity: 0;
+  animation: fadeIn 1s ease-out 1s forwards;
 }
+
 .btn:hover {
-  background-color: #005b99;
-  transform: scale(1.05);
+  background-color: rgba(255, 255, 255, 0.4);
+  transform: scale(1.1);
+}
+
+/* Cursor Glow Effect */
+.cursor-glow {
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  filter: blur(10px);
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  transition: transform 0.1s ease-out;
+}
+
+/* Keyframe Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 </style>
+
+<script>
+// Cursor Glow Effect
+document.addEventListener("mousemove", (e) => {
+  const glow = document.querySelector(".cursor-glow");
+  glow.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
+});
+</script>

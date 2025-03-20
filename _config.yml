@@ -216,3 +216,12 @@ collections:
     permalink: /:path/
 
 include: ["_pages"]
+
+header_pages:
+  - index.md
+  - about.md
+  - resources.md
+  - case-studies.md
+  - interactive-tools.md
+  - blog.md
+

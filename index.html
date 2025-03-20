@@ -7,10 +7,10 @@ permalink: /
 <header class="main-header">
   <nav>
     <ul>
-      <li><a href="/">Home</a></li>
-      <li><a href="/about/">About</a></li>
-      <li><a href="/resources/">Resources</a></li>
-      <li><a href="/case-studies/">Case Studies</a></li>
+      <li><a href="https://alaiatai.github.io/oncodecoded/">Home</a></li>
+      <li><a href="https://alaiatai.github.io/oncodecoded/about/">About</a></li>
+      <li><a href="https://alaiatai.github.io/oncodecoded/resources/">Resources</a></li>
+      <li><a href="https://alaiatai.github.io/oncodecoded/case-studies/">Case Studies</a></li>
     </ul>
   </nav>
 </header>
@@ -19,7 +19,7 @@ permalink: /
   <h1>Decoding Cancer Genomics</h1>
   <p>Understanding how genetic mutations shape cancer treatment.<br> 
   Every cancer is unique—why should treatment be one-size-fits-all?</p>
-  <a href="/about/" class="btn">Explore the Science</a>
+  <a href="https://alaiatai.github.io/oncodecoded/about/" class="btn">Explore the Science</a>
 </section>
 
 <style>
@@ -100,7 +100,7 @@ p {
   text-decoration: none;
   border-radius: 8px;
   transition: background 0.3s ease, transform 0.2s ease;
-  opacity: 0;
+  opacity: 1;
   animation: fadeIn 1s ease-out 1s forwards;
 }
 
@@ -110,6 +110,11 @@ p {
 }
 
 /* Keyframe Animations */
+@-webkit-keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
 @keyframes fadeIn {
   from { opacity: 0; }
   to { opacity: 1; }

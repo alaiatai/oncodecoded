@@ -225,3 +225,8 @@ plugins:
   - jekyll-paginate
   - jekyll-sitemap
   - jemoji
+
+collections:
+  pages:
+    output: true
+    permalink: /:path/

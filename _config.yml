@@ -229,4 +229,4 @@ plugins:
 collections:
   pages:
     output: true
-    permalink: /about/
+    permalink: /pages/:path/

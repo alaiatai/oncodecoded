@@ -54,19 +54,21 @@ paths:
   
 ## => Navigation (Optional: If you want a top menu)
 ##############################
-nav:
+menu:
   - title: Home
     url: /
   - title: About
     url: /about/
+  - title: Case Studies
+    url: /case-studies/
+  - title: Interactive Tools
+    url: /interactive-tools/
   - title: Resources
     url: /resources/
   - title: Blog
     url: /blog/
   - title: Contact
-    url: /contact/- title: Blog
-    url: /archive.html
-
+    url: /contact/
 
 ## => Post
 ##############################

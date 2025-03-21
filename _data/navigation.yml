@@ -11,6 +11,4 @@ header:
   - titles:
       en: &EN "Curator's Blog"
     url: /blog/
-  - titles:
-      en: Explore the Science
-    url: /about/
+

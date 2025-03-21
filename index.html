@@ -1,253 +1,99 @@
 ---
-layout: page
-title: Home
-permalink: /
+layout: home
+title: Decoding Cancer Genomics
+description: Discover the power of personalized cancer treatment through an engaging journey into cancer genomics, variant curation, and its real-world impact.
 ---
 
-<section class="hero">
-  <div class="hero-content">
-    <h1>Rewriting Cancer Treatment, One DNA Strand at a Time</h1>
-    <p>Join us in exploring how genetic insights are transforming cancer care through personalized treatments. Let’s make the science fun, approachable, and empowering!</p>
-    <a href="/understanding-cancer-mutations/" class="btn btn-primary">Start Learning</a>
-  </div>
-  <div class="hero-animation">
-    <canvas id="dnaCanvas"></canvas>
-  </div>
-</section>
+<div class="full-screen">
+  <!-- DNA Animation -->
+  <canvas id="dnaCanvas"></canvas>
 
-<section class="intro">
-  <div class="container">
-    <h2>Why Variant Curation Matters</h2>
-    <p>Cancer isn’t one-size-fits-all. Every tumor has unique DNA changes, and understanding these mutations can guide life-changing treatments.</p>
-  </div>
-</section>
-
-<section class="highlights">
-  <div class="container">
-    <div class="highlight">
-      <img src="/assets/icons/genomics.svg" alt="Genomics Icon">
-      <h3>Understanding Cancer Mutations</h3>
-      <p>Learn how DNA mutations drive cancer and what variant curation means in simple terms.</p>
-      <a href="/understanding-cancer-mutations/" class="link">Explore More</a>
-    </div>
-    <div class="highlight">
-      <img src="/assets/icons/biopsy.svg" alt="Biopsy Icon">
-      <h3>From Biopsy to Treatment</h3>
-      <p>See how we go from a tissue sample to personalized care in a step-by-step guide.</p>
-      <a href="/from-biopsy-to-treatment/" class="link">Learn the Process</a>
-    </div>
-    <div class="highlight">
-      <img src="/assets/icons/impact.svg" alt="Impact Icon">
-      <h3>Real-World Impact</h3>
-      <p>Read stories of how genomics has improved patient outcomes around the world.</p>
-      <a href="/real-world-impact/" class="link">See the Impact</a>
+  <!-- Content Section -->
+  <div class="content-wrapper">
+    <h1 class="main-title">Decoding Cancer Genomics</h1>
+    <p class="intro-text">
+      Understanding how genetic mutations shape cancer treatment.<br>
+      Every cancer is unique—why should treatment be one-size-fits-all?
+    </p>
+    <div class="button-group">
+      <a href="#explore" class="btn">Explore More</a>
+      <a href="#process" class="btn">Learn Process</a>
+      <a href="#impact" class="btn">See Impact</a>
     </div>
   </div>
-</section>
-
-<section class="cta">
-  <div class="container">
-    <h2>Let’s Decode Cancer Genomics Together</h2>
-    <p>Ready to dive deeper? Explore interactive tools, case studies, and more.</p>
-    <a href="/interactive-learning/" class="btn btn-accent">Get Started</a>
-  </div>
-</section>
-
-<style>
-/* General Styles */
-@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;600;700&family=Fira+Code:wght@400;700&display=swap');
-
-body {
-  font-family: 'Work Sans', sans-serif;
-  margin: 0;
-  background: #FAF9F6;
-  color: #212529;
-  height: 100vh;
-  overflow-x: hidden;
-}
-
-h1, h2, h3 {
-  font-family: 'Fira Code', monospace;
-}
-
-/* Hero Section */
-.hero {
-  position: relative;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: linear-gradient(135deg, #3A0CA3, #4361EE);
-  color: white;
-  text-align: center;
-  overflow: hidden;
-}
-
-.hero-content {
-  z-index: 2;
-}
-
-.hero-content h1 {
-  font-size: 3rem;
-  margin-bottom: 20px;
-}
-
-.hero-content p {
-  font-size: 1.2rem;
-  margin-bottom: 30px;
-}
-
-.hero-content .btn-primary {
-  background: #F72585;
-  color: white;
-  padding: 12px 30px;
-  text-decoration: none;
-  border-radius: 5px;
-  font-size: 1rem;
-  transition: all 0.3s ease;
-}
-
-.hero-content .btn-primary:hover {
-  background: #D4166D;
-}
-
-#dnaCanvas {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-}
-
-/* Intro Section */
-.intro {
-  padding: 50px 20px;
-  text-align: center;
-  background: white;
-}
-
-.intro h2 {
-  font-size: 2rem;
-  margin-bottom: 15px;
-}
-
-.intro p {
-  font-size: 1rem;
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-/* Highlights Section */
-.highlights {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  padding: 50px 20px;
-  background: #F1F5FF;
-  justify-content: center;
-}
-
-.highlight {
-  background: white;
-  padding: 20px;
-  border-radius: 10px;
-  width: 300px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  transition: transform 0.3s ease;
-}
-
-.highlight:hover {
-  transform: translateY(-10px);
-}
-
-.highlight img {
-  width: 50px;
-  margin-bottom: 15px;
-}
-
-.highlight h3 {
-  font-size: 1.5rem;
-  margin-bottom: 10px;
-}
-
-.highlight p {
-  font-size: 1rem;
-}
-
-.highlight .link {
-  color: #4361EE;
-  text-decoration: none;
-  font-weight: 600;
-}
-
-/* Call to Action */
-.cta {
-  text-align: center;
-  padding: 50px 20px;
-  background: linear-gradient(135deg, #4361EE, #3A0CA3);
-  color: white;
-}
-
-.cta h2 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-}
-
-.cta p {
-  font-size: 1.2rem;
-  margin-bottom: 30px;
-}
-
-.cta .btn-accent {
-  background: #F72585;
-  color: white;
-  padding: 12px 30px;
-  text-decoration: none;
-  border-radius: 5px;
-  font-size: 1rem;
-}
-
-.cta .btn-accent:hover {
-  background: #D4166D;
-}
-</style>
+</div>
 
 <script>
-const canvas = document.getElementById("dnaCanvas");
-const ctx = canvas.getContext("2d");
+  // DNA Animation Script
+  const canvas = document.getElementById("dnaCanvas");
+  const ctx = canvas.getContext("2d");
 
-function drawDNA() {
-  const width = canvas.width = window.innerWidth;
-  const height = canvas.height = window.innerHeight;
-
-  const centerX = width / 2;
-  const centerY = height / 2;
-  let t = 0;
-
-  function animate() {
-    ctx.clearRect(0, 0, width, height);
-    ctx.globalAlpha = 0.15; // Set lower opacity for subtle effect
-    for (let i = -180; i < 180; i++) {
-      const x = centerX + i * 3;
-      const y = centerY + 100 * Math.sin(i / 20 + t);
-
-      // Use a gradient for soft pastel colors
-      const gradient = ctx.createRadialGradient(x, y, 0, x, y, 5);
-      gradient.addColorStop(0, "rgba(67, 97, 238, 0.6)");
-      gradient.addColorStop(1, "rgba(247, 37, 133, 0.6)");
-
-      ctx.fillStyle = gradient;
-      ctx.beginPath();
-      ctx.arc(x, y, 5, 0, Math.PI * 2);
-      ctx.fill();
-    }
-    t += 0.03; // Slow down the animation for a smoother experience
-    requestAnimationFrame(animate);
+  function resizeCanvas() {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
   }
-  animate();
-}
 
-drawDNA();
+  window.addEventListener("resize", resizeCanvas);
+  resizeCanvas();
+
+  const particles = [];
+  const lines = [];
+  let angle = 0;
+
+  // Generate DNA nodes and connections
+  for (let i = 0; i < 40; i++) {
+    particles.push({
+      x: 0,
+      y: 0,
+      z: i * 20,
+    });
+    if (i > 0) {
+      lines.push([i - 1, i]);
+    }
+  }
+
+  function draw() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    const centerX = canvas.width / 2;
+    const centerY = canvas.height / 2;
+
+    particles.forEach((p, index) => {
+      const scale = 300 / (300 + p.z);
+      const x = centerX + Math.sin(angle + index * 0.5) * 120 * scale;
+      const y = centerY + Math.cos(angle + index * 0.5) * 120 * scale;
+
+      ctx.beginPath();
+      ctx.arc(x, y, 4 * scale, 0, Math.PI * 2);
+      ctx.fillStyle = "rgba(67, 97, 238, 0.7)";
+      ctx.fill();
+
+      p.z -= 2;
+      if (p.z < -300) p.z = 800;
+    });
+
+    // Draw connecting lines
+    lines.forEach(([a, b]) => {
+      const pa = particles[a];
+      const pb = particles[b];
+      const scaleA = 300 / (300 + pa.z);
+      const scaleB = 300 / (300 + pb.z);
+
+      const x1 = centerX + Math.sin(angle + a * 0.5) * 120 * scaleA;
+      const y1 = centerY + Math.cos(angle + a * 0.5) * 120 * scaleA;
+      const x2 = centerX + Math.sin(angle + b * 0.5) * 120 * scaleB;
+      const y2 = centerY + Math.cos(angle + b * 0.5) * 120 * scaleB;
+
+      ctx.beginPath();
+      ctx.moveTo(x1, y1);
+      ctx.lineTo(x2, y2);
+      ctx.strokeStyle = "rgba(67, 97, 238, 0.2)";
+      ctx.lineWidth = 1;
+      ctx.stroke();
+    });
+
+    angle += 0.01;
+    requestAnimationFrame(draw);
+  }
+
+  draw();
 </script>

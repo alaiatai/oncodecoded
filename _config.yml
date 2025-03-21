@@ -4,7 +4,7 @@ text_skin: "dark" # "default" (default), "dark", "forest", "ocean", "chocolate",
 highlight_theme: "tomorrow-night" # "default" (default), "tomorrow", "tomorrow-night", "tomorrow-night-eighties", "tomorrow-night-blue", "tomorrow-night-bright"
 url     : https://alaiatai.github.io/oncodecoded/ # the base hostname & protocol for your site e.g. https://www.someone.com
 baseurl : # does not include hostname
-title   : Cancer and You
+title   : OncoDecoded
 subtitle: Understanding Genetic Mutations & Precision Medicine
 description: > # this means to ignore newlines until "Language & timezone"
   A simple guide to cancer genomics and personalized medicine.
@@ -51,8 +51,6 @@ menu:
     url: /resources/
   - title: Blog
     url: /blog/
-  - title: Contact
-    url: /contact/
 
 ## => Post
 ##############################

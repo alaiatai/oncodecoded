@@ -18,7 +18,7 @@ permalink: /
 <section class="intro">
   <div class="container">
     <h2>Why Variant Curation Matters</h2>
-    <p>Cancer isn’t one-size-fits-all. Every tumor has unique DNA changes, and understanding these mutations can guide life-changing treatments.</p>
+    <p>Every cancer is unique, just like its DNA. Unlocking the secrets of these mutations enables personalized, targeted treatments that save lives.</p>
   </div>
 </section>
 
@@ -27,19 +27,19 @@ permalink: /
     <div class="highlight">
       <img src="/assets/icons/genomics.svg" alt="Genomics Icon">
       <h3>Understanding Cancer Mutations</h3>
-      <p>Learn how DNA mutations drive cancer and what variant curation means in simple terms.</p>
+      <p>Discover how changes in DNA can lead to cancer and how scientists decode these mutations to tailor treatments.</p>
       <a href="/understanding-cancer-mutations/" class="link">Explore More</a>
     </div>
     <div class="highlight">
       <img src="/assets/icons/biopsy.svg" alt="Biopsy Icon">
       <h3>From Biopsy to Treatment</h3>
-      <p>See how we go from a tissue sample to personalized care in a step-by-step guide.</p>
+      <p>Follow the journey of a tissue sample from the lab to life-changing decisions in the clinic.</p>
       <a href="/from-biopsy-to-treatment/" class="link">Learn the Process</a>
     </div>
     <div class="highlight">
       <img src="/assets/icons/impact.svg" alt="Impact Icon">
       <h3>Real-World Impact</h3>
-      <p>Read stories of how genomics has improved patient outcomes around the world.</p>
+      <p>See how genetic insights are making a real difference in cancer patients’ lives worldwide.</p>
       <a href="/real-world-impact/" class="link">See the Impact</a>
     </div>
   </div>
@@ -48,7 +48,7 @@ permalink: /
 <section class="cta">
   <div class="container">
     <h2>Let’s Decode Cancer Genomics Together</h2>
-    <p>Ready to dive deeper? Explore interactive tools, case studies, and more.</p>
+    <p>Explore interactive tools, inspiring case studies, and engaging content to learn more.</p>
     <a href="/interactive-learning/" class="btn btn-accent">Get Started</a>
   </div>
 </section>
@@ -68,48 +68,6 @@ body {
 
 h1, h2, h3 {
   font-family: 'Fira Code', monospace;
-}
-
-/* Header */
-.main-header {
-  position: fixed;
-  width: 100%;
-  top: 0;
-  left: 0;
-  background: rgba(58, 12, 163, 0.9);
-  color: white;
-  padding: 10px 20px;
-  z-index: 1000;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-}
-
-.main-header .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.main-header .logo {
-  font-size: 1.5rem;
-  font-weight: 700;
-  text-decoration: none;
-  color: white;
-}
-
-.main-header .logo span {
-  color: #F72585;
-}
-
-.main-header .nav-links a {
-  color: white;
-  margin-left: 20px;
-  text-decoration: none;
-  font-size: 1rem;
-  transition: color 0.3s ease;
-}
-
-.main-header .nav-links a:hover {
-  color: #F72585;
 }
 
 /* Hero Section */
@@ -275,7 +233,6 @@ h1, h2, h3 {
   const lines = [];
   let angle = 0;
 
-  // Generate DNA nodes and connections
   for (let i = 0; i < 40; i++) {
     particles.push({
       x: 0,
@@ -306,7 +263,6 @@ h1, h2, h3 {
       if (p.z < -300) p.z = 800;
     });
 
-    // Draw connecting lines
     lines.forEach(([a, b]) => {
       const pa = particles[a];
       const pb = particles[b];
@@ -332,3 +288,4 @@ h1, h2, h3 {
 
   draw();
 </script>
+

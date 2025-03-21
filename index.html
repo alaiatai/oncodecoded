@@ -4,133 +4,201 @@ title:
 permalink: /
 ---
 
-<section class="homepage-intro">
-  <h1>Welcome to the World of Cancer Genomics!</h1>
-  <p>Ever wondered how a tiny change in DNA can lead to something as big as cancer? Let’s unravel the mysteries of genetic mutations together.  
-  No jargon, just clear and fun explanations of how science is shaping personalized cancer treatments.</p>
-  <a href="https://alaiatai.github.io/oncodecoded/about/" class="btn">Let’s Explore!</a>
+<section class="hero-banner">
+  <div class="content">
+    <h1>Welcome to OncoDecoded!</h1>
+    <p>Where cancer genomics meets clarity. Let’s uncover the science of personalized cancer care in a way that's simple, fun, and inspiring.</p>
+    <a href="https://alaiatai.github.io/oncodecoded/about/" class="btn">Start Exploring</a>
+  </div>
+</section>
+
+<section class="intro-section">
+  <div class="container">
+    <h2>Why Cancer Genomics Matters</h2>
+    <p>Cancer isn’t one-size-fits-all, so treatments shouldn’t be either. With advancements in genomics, we can now tailor therapies to target the unique genetic changes in each tumor.</p>
+  </div>
+</section>
+
+<section class="topics-section">
+  <div class="container">
+    <h2>What You’ll Learn Here</h2>
+    <div class="topics">
+      <div class="topic-card">
+        <h3>DNA & Cancer</h3>
+        <p>Learn how tiny changes in our DNA can make a huge impact on health.</p>
+      </div>
+      <div class="topic-card">
+        <h3>Genomics 101</h3>
+        <p>No need to be a scientist—discover how genomics works in simple terms.</p>
+      </div>
+      <div class="topic-card">
+        <h3>Personalized Medicine</h3>
+        <p>Understand how doctors use genetic insights to craft precise cancer treatments.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="call-to-action">
+  <div class="container">
+    <h2>Let’s Make Genomics Easy!</h2>
+    <p>Ready to dive into the exciting world of cancer genomics? Click below to start learning!</p>
+    <a href="https://alaiatai.github.io/oncodecoded/about/" class="btn">Get Started</a>
+  </div>
 </section>
 
 <style>
 /* General Styling */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Roboto:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
 
 body {
-  font-family: "Roboto", sans-serif; /* Easy-to-read body font */
+  font-family: "Roboto", sans-serif;
   margin: 0;
   padding: 0;
-  background: linear-gradient(135deg, #f8f9fa, #e3f2fd); /* Soft gradient for a friendly vibe */
+  background: #f9fafb; /* Subtle neutral background */
   color: #333;
   overflow-x: hidden;
 }
 
-/* Navigation Bar */
-.main-header {
-  background: #344955; /* Calming deep teal */
-  padding: 15px;
-  text-align: center;
-}
-
-.main-header nav ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.main-header nav ul li {
-  display: inline;
-  margin: 0 15px;
-}
-
-.main-header nav ul li a {
+/* Hero Banner */
+.hero-banner {
+  background: linear-gradient(135deg, #264653, #2a9d8f); /* Teal gradient */
   color: white;
-  font-size: 1.1em;
-  font-weight: bold;
-  text-decoration: none;
-  transition: opacity 0.3s ease, transform 0.2s ease;
-  font-family: "Poppins", sans-serif; /* Designer font for titles */
-}
-
-.main-header nav ul li a:hover {
-  opacity: 0.8;
-  transform: scale(1.05);
-}
-
-/* Intro Section */
-.homepage-intro {
   text-align: center;
-  margin: 100px auto;
-  max-width: 700px;
-  padding: 30px;
-  border-radius: 15px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  background: #ffffff;
-  animation: fadeInUp 1s ease-out forwards;
+  padding: 60px 20px;
 }
 
-h1 {
-  font-family: "Poppins", sans-serif;
-  font-size: 2.8em;
+.hero-banner .content h1 {
+  font-size: 3em;
   font-weight: 700;
-  color: #344955; /* Matches nav bar for cohesion */
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
   margin-bottom: 20px;
 }
 
-p {
+.hero-banner .content p {
+  font-size: 1.2em;
+  margin-bottom: 30px;
+}
+
+.hero-banner .btn {
+  background: #e76f51;
+  color: white;
+  padding: 10px 25px;
+  font-size: 1em;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.hero-banner .btn:hover {
+  background: #d3543d;
+}
+
+/* Intro Section */
+.intro-section {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.intro-section h2 {
+  font-size: 2.4em;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.intro-section p {
   font-size: 1.2em;
   line-height: 1.6;
-  font-family: "Roboto", sans-serif;
+}
+
+/* Topics Section */
+.topics-section {
+  background: white;
+  padding: 60px 20px;
+}
+
+.topics-section h2 {
+  font-size: 2.4em;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.topics {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.topic-card {
+  background: #f4f4f4;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.topic-card:hover {
+  transform: translateY(-5px);
+}
+
+.topic-card h3 {
+  font-size: 1.6em;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #264653;
+}
+
+.topic-card p {
+  font-size: 1em;
   color: #555;
-  margin-bottom: 25px;
 }
 
-/* Button Styling */
-.btn {
-  display: inline-block;
-  padding: 12px 28px;
-  background: #f9aa33; /* Bright and welcoming */
+/* Call-to-Action Section */
+.call-to-action {
+  background: #2a9d8f;
   color: white;
-  font-size: 1.1em;
-  font-weight: bold;
-  text-decoration: none;
-  border-radius: 8px;
-  font-family: "Poppins", sans-serif;
-  transition: all 0.3s ease;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 40px 20px;
 }
 
-.btn:hover {
-  background: #f39c12; /* Darker shade on hover */
-  transform: translateY(-3px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+.call-to-action h2 {
+  font-size: 2.4em;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.call-to-action p {
+  font-size: 1.2em;
+  margin-bottom: 30px;
+}
+
+.call-to-action .btn {
+  background: #e76f51;
+  color: white;
+  padding: 10px 25px;
+  font-size: 1em;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.call-to-action .btn:hover {
+  background: #d3543d;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-  h1 {
-    font-size: 2.4em;
+  .topics {
+    flex-direction: column;
+    align-items: center;
   }
 
-  p {
-    font-size: 1em;
-  }
-
-  .homepage-intro {
-    margin: 80px auto;
-    padding: 20px;
-  }
-}
-
-/* Keyframe Animations */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
+  .topic-card {
+    width: 100%;
+    margin-bottom: 20px;
   }
 }
 </style>

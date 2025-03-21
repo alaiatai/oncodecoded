@@ -4,6 +4,18 @@ title: Home
 permalink: /
 ---
 
+<header class="main-header">
+  <div class="container">
+    <a href="/" class="logo">Cancer Genomics<span>.</span></a>
+    <nav class="nav-links">
+      <a href="/understanding-cancer-mutations/">Learn</a>
+      <a href="/from-biopsy-to-treatment/">Process</a>
+      <a href="/real-world-impact/">Impact</a>
+      <a href="/interactive-learning/">Explore</a>
+    </nav>
+  </div>
+</header>
+
 <section class="hero">
   <div class="hero-content">
     <h1>Rewriting Cancer Treatment, One DNA Strand at a Time</h1>
@@ -70,11 +82,54 @@ h1, h2, h3 {
   font-family: 'Fira Code', monospace;
 }
 
+/* Header */
+.main-header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(58, 12, 163, 0.9);
+  color: white;
+  padding: 10px 20px;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.main-header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main-header .logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-decoration: none;
+  color: white;
+}
+
+.main-header .logo span {
+  color: #F72585;
+}
+
+.main-header .nav-links a {
+  color: white;
+  margin-left: 20px;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.main-header .nav-links a:hover {
+  color: #F72585;
+}
+
 /* Hero Section */
 .hero {
   position: relative;
   height: 100vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   background: linear-gradient(135deg, #3A0CA3, #4361EE);
@@ -88,22 +143,23 @@ h1, h2, h3 {
 }
 
 .hero-content h1 {
-  font-size: 3rem;
+  font-size: 4rem;
   margin-bottom: 20px;
 }
 
 .hero-content p {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   margin-bottom: 30px;
+  max-width: 800px;
 }
 
 .hero-content .btn-primary {
   background: #F72585;
   color: white;
-  padding: 12px 30px;
+  padding: 14px 40px;
   text-decoration: none;
-  border-radius: 5px;
-  font-size: 1rem;
+  border-radius: 8px;
+  font-size: 1.2rem;
   transition: all 0.3s ease;
 }
 
@@ -122,19 +178,19 @@ h1, h2, h3 {
 
 /* Intro Section */
 .intro {
-  padding: 50px 20px;
+  padding: 80px 20px;
   text-align: center;
   background: white;
 }
 
 .intro h2 {
-  font-size: 2rem;
+  font-size: 2.5rem;
   margin-bottom: 15px;
 }
 
 .intro p {
-  font-size: 1rem;
-  max-width: 600px;
+  font-size: 1.2rem;
+  max-width: 700px;
   margin: 0 auto;
 }
 
@@ -203,10 +259,10 @@ h1, h2, h3 {
 .cta .btn-accent {
   background: #F72585;
   color: white;
-  padding: 12px 30px;
+  padding: 14px 40px;
   text-decoration: none;
-  border-radius: 5px;
-  font-size: 1rem;
+  border-radius: 8px;
+  font-size: 1.2rem;
 }
 
 .cta .btn-accent:hover {

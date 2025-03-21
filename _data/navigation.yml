@@ -1,8 +1,5 @@
 header:
   - titles:
-      en: &EN Behind the Science
-    url: /about/
-  - titles:
       en: &EN Knowledge Hub
     url: /resources/
   - titles:

@@ -41,17 +41,7 @@ paths:
 menu:
   - title: Home
     url: /
-  - title: About
-    url: /about/
-  - title: Case Studies
-    url: /case-studies/
-  - title: Interactive Tools
-    url: /interactive-tools/
-  - title: Resources
-    url: /resources/
-  - title: Blog
-    url: /blog/
-
+    
 ## => Post
 ##############################
 ## excerpt

@@ -62,6 +62,8 @@ body {
   margin: 0;
   background: #FAF9F6;
   color: #212529;
+  height: 100vh;
+  overflow-x: hidden;
 }
 
 h1, h2, h3 {
@@ -71,11 +73,18 @@ h1, h2, h3 {
 /* Hero Section */
 .hero {
   position: relative;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background: linear-gradient(135deg, #3A0CA3, #4361EE);
   color: white;
-  padding: 100px 20px;
   text-align: center;
   overflow: hidden;
+}
+
+.hero-content {
+  z-index: 2;
 }
 
 .hero-content h1 {
@@ -108,7 +117,7 @@ h1, h2, h3 {
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 0;
+  z-index: 1;
 }
 
 /* Intro Section */
@@ -211,23 +220,30 @@ const ctx = canvas.getContext("2d");
 
 function drawDNA() {
   const width = canvas.width = window.innerWidth;
-  const height = canvas.height = 400;
-  
+  const height = canvas.height = window.innerHeight;
+
   const centerX = width / 2;
   const centerY = height / 2;
   let t = 0;
 
   function animate() {
     ctx.clearRect(0, 0, width, height);
+    ctx.globalAlpha = 0.15; // Set lower opacity for subtle effect
     for (let i = -180; i < 180; i++) {
       const x = centerX + i * 3;
       const y = centerY + 100 * Math.sin(i / 20 + t);
-      ctx.fillStyle = `rgba(${255 - i % 255}, ${i % 255}, 150, 0.7)`;
+
+      // Use a gradient for soft pastel colors
+      const gradient = ctx.createRadialGradient(x, y, 0, x, y, 5);
+      gradient.addColorStop(0, "rgba(67, 97, 238, 0.6)");
+      gradient.addColorStop(1, "rgba(247, 37, 133, 0.6)");
+
+      ctx.fillStyle = gradient;
       ctx.beginPath();
       ctx.arc(x, y, 5, 0, Math.PI * 2);
       ctx.fill();
     }
-    t += 0.05;
+    t += 0.03; // Slow down the animation for a smoother experience
     requestAnimationFrame(animate);
   }
   animate();

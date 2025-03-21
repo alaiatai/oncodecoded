@@ -4,16 +4,16 @@ header:
     url: /
   - titles:
       en: &EN About
-    url: /about.html
+    url: /about/
   - titles:
       en: &EN Resources
-    url: /resources.html
+    url: /resources/
   - titles:
       en: &EN Case Studies
-    url: /case-studies.html
+    url: /case-studies/
   - titles:
       en: &EN Interactive Tools
-    url: /interactive-tools.html
+    url: /interactive-tools/
   - titles:
       en: &EN Blog
-    url: /blog.html
+    url: /blog/

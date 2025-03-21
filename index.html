@@ -1,233 +1,237 @@
 ---
 layout: page
-title: 
+title: Home
 permalink: /
 ---
 
-<section class="hero-section">
+<section class="hero">
   <div class="hero-content">
-    <h1>Decoding Cancer Genomics</h1>
-    <p>Discover how DNA changes are rewriting cancer treatment—and how genomics is the key to personalizing care.</p>
-    <a href="https://alaiatai.github.io/oncodecoded/about/" class="btn">Start Exploring</a>
+    <h1>Rewriting Cancer Treatment, One DNA Strand at a Time</h1>
+    <p>Join us in exploring how genetic insights are transforming cancer care through personalized treatments. Let’s make the science fun, approachable, and empowering!</p>
+    <a href="/understanding-cancer-mutations/" class="btn btn-primary">Start Learning</a>
   </div>
-  <div class="dna-animation">
-    <!-- DNA Strand Visual -->
-    <div class="dna">
-      <span></span><span></span><span></span><span></span>
+  <div class="hero-animation">
+    <canvas id="dnaCanvas"></canvas>
+  </div>
+</section>
+
+<section class="intro">
+  <div class="container">
+    <h2>Why Variant Curation Matters</h2>
+    <p>Cancer isn’t one-size-fits-all. Every tumor has unique DNA changes, and understanding these mutations can guide life-changing treatments.</p>
+  </div>
+</section>
+
+<section class="highlights">
+  <div class="container">
+    <div class="highlight">
+      <img src="/assets/icons/genomics.svg" alt="Genomics Icon">
+      <h3>Understanding Cancer Mutations</h3>
+      <p>Learn how DNA mutations drive cancer and what variant curation means in simple terms.</p>
+      <a href="/understanding-cancer-mutations/" class="link">Explore More</a>
+    </div>
+    <div class="highlight">
+      <img src="/assets/icons/biopsy.svg" alt="Biopsy Icon">
+      <h3>From Biopsy to Treatment</h3>
+      <p>See how we go from a tissue sample to personalized care in a step-by-step guide.</p>
+      <a href="/from-biopsy-to-treatment/" class="link">Learn the Process</a>
+    </div>
+    <div class="highlight">
+      <img src="/assets/icons/impact.svg" alt="Impact Icon">
+      <h3>Real-World Impact</h3>
+      <p>Read stories of how genomics has improved patient outcomes around the world.</p>
+      <a href="/real-world-impact/" class="link">See the Impact</a>
     </div>
   </div>
 </section>
 
-<section class="features-section">
+<section class="cta">
   <div class="container">
-    <h2>Explore the Science</h2>
-    <p>Cancer genomics doesn’t have to feel overwhelming. Let’s break it down into simple, fun concepts.</p>
-    <div class="features">
-      <div class="feature">
-        <h3>Genomics Basics</h3>
-        <p>Unpack the secrets of DNA and learn how genetic mutations shape cancer outcomes.</p>
-      </div>
-      <div class="feature">
-        <h3>Precision Medicine</h3>
-        <p>See how doctors are personalizing cancer care based on genetic insights.</p>
-      </div>
-      <div class="feature">
-        <h3>What’s Next?</h3>
-        <p>Explore how new discoveries are changing the way we fight cancer every day.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="interactive-section">
-  <div class="container">
-    <h2>Interactive Genomics Journey</h2>
-    <p>Visualize how cancer genomics works with this step-by-step guide.</p>
-    <div class="steps">
-      <div class="step">
-        <div class="icon">🔬</div>
-        <h3>DNA Sequencing</h3>
-        <p>Identify genetic changes in tumor cells.</p>
-      </div>
-      <div class="step">
-        <div class="icon">🧬</div>
-        <h3>Genomic Insights</h3>
-        <p>Analyze mutations that drive cancer growth.</p>
-      </div>
-      <div class="step">
-        <div class="icon">💊</div>
-        <h3>Personalized Therapy</h3>
-        <p>Match treatments to specific genetic changes.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="cta-section">
-  <div class="container">
-    <h2>Take the Next Step</h2>
-    <p>Join the journey of decoding cancer genomics and explore how precision medicine is transforming lives.</p>
-    <a href="https://alaiatai.github.io/oncodecoded/about/" class="btn">Learn More</a>
+    <h2>Let’s Decode Cancer Genomics Together</h2>
+    <p>Ready to dive deeper? Explore interactive tools, case studies, and more.</p>
+    <a href="/interactive-learning/" class="btn btn-accent">Get Started</a>
   </div>
 </section>
 
 <style>
-/* General Styling */
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700&family=Roboto+Mono:wght@400;700&display=swap');
+/* General Styles */
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;600;700&family=Fira+Code:wght@400;700&display=swap');
 
 body {
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Work Sans', sans-serif;
   margin: 0;
-  padding: 0;
-  background: #f6f9fc;
-  color: #333;
-  line-height: 1.6;
+  background: #FAF9F6;
+  color: #212529;
+}
+
+h1, h2, h3 {
+  font-family: 'Fira Code', monospace;
 }
 
 /* Hero Section */
-.hero-section {
-  background: linear-gradient(135deg, #264653, #2a9d8f);
-  color: white;
-  padding: 80px 20px;
-  text-align: center;
+.hero {
   position: relative;
+  background: linear-gradient(135deg, #3A0CA3, #4361EE);
+  color: white;
+  padding: 100px 20px;
+  text-align: center;
   overflow: hidden;
 }
 
 .hero-content h1 {
-  font-size: 3em;
-  font-weight: 700;
+  font-size: 3rem;
   margin-bottom: 20px;
 }
 
 .hero-content p {
-  font-size: 1.2em;
+  font-size: 1.2rem;
   margin-bottom: 30px;
 }
 
-.hero-content .btn {
-  background: #e76f51;
+.hero-content .btn-primary {
+  background: #F72585;
   color: white;
   padding: 12px 30px;
   text-decoration: none;
   border-radius: 5px;
-  font-size: 1em;
+  font-size: 1rem;
   transition: all 0.3s ease;
 }
 
-.hero-content .btn:hover {
-  background: #d3543d;
+.hero-content .btn-primary:hover {
+  background: #D4166D;
 }
 
-.dna-animation {
+#dnaCanvas {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  opacity: 0.2;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
 }
 
-.dna span {
-  display: block;
-  height: 15px;
-  width: 15px;
-  background: white;
-  border-radius: 50%;
-  margin: 10px auto;
-  animation: move 2s linear infinite;
-}
-
-/* DNA Animation */
-@keyframes move {
-  0% { transform: translateY(0); }
-  50% { transform: translateY(20px); }
-  100% { transform: translateY(0); }
-}
-
-/* Features Section */
-.features-section {
-  padding: 60px 20px;
-  background: white;
+/* Intro Section */
+.intro {
+  padding: 50px 20px;
   text-align: center;
+  background: white;
 }
 
-.features-section h2 {
-  font-size: 2.5em;
-  margin-bottom: 20px;
+.intro h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
 }
 
-.features {
+.intro p {
+  font-size: 1rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Highlights Section */
+.highlights {
   display: flex;
-  gap: 20px;
-  justify-content: center;
   flex-wrap: wrap;
+  gap: 20px;
+  padding: 50px 20px;
+  background: #F1F5FF;
+  justify-content: center;
 }
 
-.feature {
-  background: #f4f4f4;
+.highlight {
+  background: white;
   padding: 20px;
   border-radius: 10px;
   width: 300px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
   transition: transform 0.3s ease;
 }
 
-.feature:hover {
-  transform: translateY(-5px);
+.highlight:hover {
+  transform: translateY(-10px);
 }
 
-/* Interactive Section */
-.interactive-section {
-  background: #2a9d8f;
-  color: white;
-  padding: 60px 20px;
-  text-align: center;
-}
-
-.steps {
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.step {
-  background: white;
-  color: #333;
-  padding: 20px;
-  border-radius: 10px;
-  width: 250px;
-  text-align: center;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-}
-
-.step:hover {
-  transform: translateY(-5px);
-}
-
-.step .icon {
-  font-size: 2.5em;
+.highlight img {
+  width: 50px;
   margin-bottom: 15px;
 }
 
-/* Call-to-Action Section */
-.cta-section {
-  background: #264653;
-  color: white;
-  padding: 40px 20px;
-  text-align: center;
+.highlight h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
 }
 
-.cta-section .btn {
-  background: #e76f51;
-  padding: 12px 30px;
+.highlight p {
+  font-size: 1rem;
+}
+
+.highlight .link {
+  color: #4361EE;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* Call to Action */
+.cta {
+  text-align: center;
+  padding: 50px 20px;
+  background: linear-gradient(135deg, #4361EE, #3A0CA3);
   color: white;
+}
+
+.cta h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.cta p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.cta .btn-accent {
+  background: #F72585;
+  color: white;
+  padding: 12px 30px;
   text-decoration: none;
   border-radius: 5px;
+  font-size: 1rem;
 }
 
-.cta-section .btn:hover {
-  background: #d3543d;
+.cta .btn-accent:hover {
+  background: #D4166D;
 }
 </style>
+
+<script>
+const canvas = document.getElementById("dnaCanvas");
+const ctx = canvas.getContext("2d");
+
+function drawDNA() {
+  const width = canvas.width = window.innerWidth;
+  const height = canvas.height = 400;
+  
+  const centerX = width / 2;
+  const centerY = height / 2;
+  let t = 0;
+
+  function animate() {
+    ctx.clearRect(0, 0, width, height);
+    for (let i = -180; i < 180; i++) {
+      const x = centerX + i * 3;
+      const y = centerY + 100 * Math.sin(i / 20 + t);
+      ctx.fillStyle = `rgba(${255 - i % 255}, ${i % 255}, 150, 0.7)`;
+      ctx.beginPath();
+      ctx.arc(x, y, 5, 0, Math.PI * 2);
+      ctx.fill();
+    }
+    t += 0.05;
+    requestAnimationFrame(animate);
+  }
+  animate();
+}
+
+drawDNA();
+</script>

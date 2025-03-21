@@ -4,135 +4,133 @@ title:
 permalink: /
 ---
 
-<section class="homepage-hero">
-  <div class="hero-content">
-    <h1>Decoding Cancer Genomics</h1>
-    <p>Unlock the power of precision oncology to revolutionize cancer treatment. <br> 
-    Every tumor is unique—your treatment should be too.</p>
-    <a href="https://alaiatai.github.io/oncodecoded/about/" class="btn">Learn More</a>
-  </div>
-</section>
-
-<section class="homepage-features">
-  <div class="feature">
-    <h2>Our Mission</h2>
-    <p>We aim to bridge the gap between cutting-edge genetic research and cancer care, empowering oncologists with actionable insights for personalized treatment plans.</p>
-  </div>
-  <div class="feature">
-    <h2>Why It Matters</h2>
-    <p>Cancer is not a one-size-fits-all disease. Precision medicine ensures that every treatment plan is tailored to the genetic profile of each tumor.</p>
-  </div>
-  <div class="feature">
-    <h2>Join the Journey</h2>
-    <p>Explore the science behind cancer genomics and discover how it’s transforming lives. Whether you’re a patient, a caregiver, or simply curious, knowledge is power.</p>
-  </div>
-</section>
-
-<section class="homepage-footer">
-  <p>© 2025 OncoDecoded | <a href="https://alaiatai.github.io/oncodecoded/contact/">Contact Us</a> | <a href="https://alaiatai.github.io/oncodecoded/about/">About</a></p>
+<section class="homepage-intro">
+  <h1>Welcome to the World of Cancer Genomics!</h1>
+  <p>Ever wondered how a tiny change in DNA can lead to something as big as cancer? Let’s unravel the mysteries of genetic mutations together.  
+  No jargon, just clear and fun explanations of how science is shaping personalized cancer treatments.</p>
+  <a href="https://alaiatai.github.io/oncodecoded/about/" class="btn">Let’s Explore!</a>
 </section>
 
 <style>
 /* General Styling */
-@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;700&family=Merriweather:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Roboto:wght@300;400;500&display=swap');
 
 body {
-  font-family: "Work Sans", sans-serif;
+  font-family: "Roboto", sans-serif; /* Easy-to-read body font */
   margin: 0;
   padding: 0;
-  background: linear-gradient(135deg, #f7f9fc, #ffffff);
+  background: linear-gradient(135deg, #f8f9fa, #e3f2fd); /* Soft gradient for a friendly vibe */
   color: #333;
+  overflow-x: hidden;
 }
 
-/* Hero Section */
-.homepage-hero {
+/* Navigation Bar */
+.main-header {
+  background: #344955; /* Calming deep teal */
+  padding: 15px;
   text-align: center;
-  padding: 100px 20px;
-  background-color: #264653;
-  color: white;
 }
 
-.hero-content h1 {
-  font-family: "Merriweather", serif;
-  font-size: 3em;
+.main-header nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.main-header nav ul li {
+  display: inline;
+  margin: 0 15px;
+}
+
+.main-header nav ul li a {
+  color: white;
+  font-size: 1.1em;
+  font-weight: bold;
+  text-decoration: none;
+  transition: opacity 0.3s ease, transform 0.2s ease;
+  font-family: "Poppins", sans-serif; /* Designer font for titles */
+}
+
+.main-header nav ul li a:hover {
+  opacity: 0.8;
+  transform: scale(1.05);
+}
+
+/* Intro Section */
+.homepage-intro {
+  text-align: center;
+  margin: 100px auto;
+  max-width: 700px;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  background: #ffffff;
+  animation: fadeInUp 1s ease-out forwards;
+}
+
+h1 {
+  font-family: "Poppins", sans-serif;
+  font-size: 2.8em;
   font-weight: 700;
+  color: #344955; /* Matches nav bar for cohesion */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
   margin-bottom: 20px;
 }
 
-.hero-content p {
+p {
   font-size: 1.2em;
-  font-weight: 400;
-  margin-bottom: 30px;
   line-height: 1.6;
+  font-family: "Roboto", sans-serif;
+  color: #555;
+  margin-bottom: 25px;
 }
 
-.hero-content .btn {
+/* Button Styling */
+.btn {
   display: inline-block;
-  padding: 12px 30px;
-  background: #e76f51;
+  padding: 12px 28px;
+  background: #f9aa33; /* Bright and welcoming */
   color: white;
   font-size: 1.1em;
   font-weight: bold;
   text-decoration: none;
   border-radius: 8px;
+  font-family: "Poppins", sans-serif;
   transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
-.hero-content .btn:hover {
-  background: #d3543d;
+.btn:hover {
+  background: #f39c12; /* Darker shade on hover */
   transform: translateY(-3px);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
-/* Features Section */
-.homepage-features {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
-  max-width: 1200px;
-  margin: 60px auto;
-  padding: 20px;
+/* Responsive Design */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.4em;
+  }
+
+  p {
+    font-size: 1em;
+  }
+
+  .homepage-intro {
+    margin: 80px auto;
+    padding: 20px;
+  }
 }
 
-.feature {
-  background: white;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  text-align: center;
-}
-
-.feature h2 {
-  font-family: "Merriweather", serif;
-  font-size: 1.8em;
-  font-weight: 700;
-  color: #264653;
-  margin-bottom: 15px;
-}
-
-.feature p {
-  font-size: 1.1em;
-  line-height: 1.6;
-  color: #555;
-}
-
-/* Footer */
-.homepage-footer {
-  text-align: center;
-  padding: 20px 10px;
-  background: #264653;
-  color: white;
-  font-size: 0.9em;
-}
-
-.homepage-footer a {
-  color: #e76f51;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.homepage-footer a:hover {
-  text-decoration: underline;
+/* Keyframe Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 </style>
-

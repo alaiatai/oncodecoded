@@ -4,201 +4,230 @@ title:
 permalink: /
 ---
 
-<section class="hero-banner">
-  <div class="content">
-    <h1>Welcome to OncoDecoded!</h1>
-    <p>Where cancer genomics meets clarity. Let’s uncover the science of personalized cancer care in a way that's simple, fun, and inspiring.</p>
+<section class="hero-section">
+  <div class="hero-content">
+    <h1>Decoding Cancer Genomics</h1>
+    <p>Discover how DNA changes are rewriting cancer treatment—and how genomics is the key to personalizing care.</p>
     <a href="https://alaiatai.github.io/oncodecoded/about/" class="btn">Start Exploring</a>
   </div>
-</section>
-
-<section class="intro-section">
-  <div class="container">
-    <h2>Why Cancer Genomics Matters</h2>
-    <p>Cancer isn’t one-size-fits-all, so treatments shouldn’t be either. With advancements in genomics, we can now tailor therapies to target the unique genetic changes in each tumor.</p>
+  <div class="dna-animation">
+    <!-- DNA Strand Visual -->
+    <div class="dna">
+      <span></span><span></span><span></span><span></span>
+    </div>
   </div>
 </section>
 
-<section class="topics-section">
+<section class="features-section">
   <div class="container">
-    <h2>What You’ll Learn Here</h2>
-    <div class="topics">
-      <div class="topic-card">
-        <h3>DNA & Cancer</h3>
-        <p>Learn how tiny changes in our DNA can make a huge impact on health.</p>
+    <h2>Explore the Science</h2>
+    <p>Cancer genomics doesn’t have to feel overwhelming. Let’s break it down into simple, fun concepts.</p>
+    <div class="features">
+      <div class="feature">
+        <h3>Genomics Basics</h3>
+        <p>Unpack the secrets of DNA and learn how genetic mutations shape cancer outcomes.</p>
       </div>
-      <div class="topic-card">
-        <h3>Genomics 101</h3>
-        <p>No need to be a scientist—discover how genomics works in simple terms.</p>
+      <div class="feature">
+        <h3>Precision Medicine</h3>
+        <p>See how doctors are personalizing cancer care based on genetic insights.</p>
       </div>
-      <div class="topic-card">
-        <h3>Personalized Medicine</h3>
-        <p>Understand how doctors use genetic insights to craft precise cancer treatments.</p>
+      <div class="feature">
+        <h3>What’s Next?</h3>
+        <p>Explore how new discoveries are changing the way we fight cancer every day.</p>
       </div>
     </div>
   </div>
 </section>
 
-<section class="call-to-action">
+<section class="interactive-section">
   <div class="container">
-    <h2>Let’s Make Genomics Easy!</h2>
-    <p>Ready to dive into the exciting world of cancer genomics? Click below to start learning!</p>
-    <a href="https://alaiatai.github.io/oncodecoded/about/" class="btn">Get Started</a>
+    <h2>Interactive Genomics Journey</h2>
+    <p>Visualize how cancer genomics works with this step-by-step guide.</p>
+    <div class="steps">
+      <div class="step">
+        <div class="icon">🔬</div>
+        <h3>DNA Sequencing</h3>
+        <p>Identify genetic changes in tumor cells.</p>
+      </div>
+      <div class="step">
+        <div class="icon">🧬</div>
+        <h3>Genomic Insights</h3>
+        <p>Analyze mutations that drive cancer growth.</p>
+      </div>
+      <div class="step">
+        <div class="icon">💊</div>
+        <h3>Personalized Therapy</h3>
+        <p>Match treatments to specific genetic changes.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section">
+  <div class="container">
+    <h2>Take the Next Step</h2>
+    <p>Join the journey of decoding cancer genomics and explore how precision medicine is transforming lives.</p>
+    <a href="https://alaiatai.github.io/oncodecoded/about/" class="btn">Learn More</a>
   </div>
 </section>
 
 <style>
 /* General Styling */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700&family=Roboto+Mono:wght@400;700&display=swap');
 
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Raleway', sans-serif;
   margin: 0;
   padding: 0;
-  background: #f9fafb; /* Subtle neutral background */
+  background: #f6f9fc;
   color: #333;
-  overflow-x: hidden;
+  line-height: 1.6;
 }
 
-/* Hero Banner */
-.hero-banner {
-  background: linear-gradient(135deg, #264653, #2a9d8f); /* Teal gradient */
+/* Hero Section */
+.hero-section {
+  background: linear-gradient(135deg, #264653, #2a9d8f);
   color: white;
+  padding: 80px 20px;
   text-align: center;
-  padding: 60px 20px;
+  position: relative;
+  overflow: hidden;
 }
 
-.hero-banner .content h1 {
+.hero-content h1 {
   font-size: 3em;
   font-weight: 700;
   margin-bottom: 20px;
 }
 
-.hero-banner .content p {
+.hero-content p {
   font-size: 1.2em;
   margin-bottom: 30px;
 }
 
-.hero-banner .btn {
+.hero-content .btn {
   background: #e76f51;
   color: white;
-  padding: 10px 25px;
-  font-size: 1em;
+  padding: 12px 30px;
   text-decoration: none;
   border-radius: 5px;
+  font-size: 1em;
   transition: all 0.3s ease;
 }
 
-.hero-banner .btn:hover {
+.hero-content .btn:hover {
   background: #d3543d;
 }
 
-/* Intro Section */
-.intro-section {
-  padding: 40px 20px;
+.dna-animation {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0.2;
+}
+
+.dna span {
+  display: block;
+  height: 15px;
+  width: 15px;
+  background: white;
+  border-radius: 50%;
+  margin: 10px auto;
+  animation: move 2s linear infinite;
+}
+
+/* DNA Animation */
+@keyframes move {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(20px); }
+  100% { transform: translateY(0); }
+}
+
+/* Features Section */
+.features-section {
+  padding: 60px 20px;
+  background: white;
   text-align: center;
 }
 
-.intro-section h2 {
-  font-size: 2.4em;
-  font-weight: 700;
+.features-section h2 {
+  font-size: 2.5em;
   margin-bottom: 20px;
 }
 
-.intro-section p {
-  font-size: 1.2em;
-  line-height: 1.6;
-}
-
-/* Topics Section */
-.topics-section {
-  background: white;
-  padding: 60px 20px;
-}
-
-.topics-section h2 {
-  font-size: 2.4em;
-  font-weight: 700;
-  text-align: center;
-  margin-bottom: 40px;
-}
-
-.topics {
+.features {
   display: flex;
-  justify-content: center;
   gap: 20px;
+  justify-content: center;
   flex-wrap: wrap;
 }
 
-.topic-card {
+.feature {
   background: #f4f4f4;
   padding: 20px;
   border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   width: 300px;
-  text-align: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
 }
 
-.topic-card:hover {
+.feature:hover {
   transform: translateY(-5px);
 }
 
-.topic-card h3 {
-  font-size: 1.6em;
-  font-weight: 700;
-  margin-bottom: 15px;
-  color: #264653;
+/* Interactive Section */
+.interactive-section {
+  background: #2a9d8f;
+  color: white;
+  padding: 60px 20px;
+  text-align: center;
 }
 
-.topic-card p {
-  font-size: 1em;
-  color: #555;
+.steps {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.step {
+  background: white;
+  color: #333;
+  padding: 20px;
+  border-radius: 10px;
+  width: 250px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.step:hover {
+  transform: translateY(-5px);
+}
+
+.step .icon {
+  font-size: 2.5em;
+  margin-bottom: 15px;
 }
 
 /* Call-to-Action Section */
-.call-to-action {
-  background: #2a9d8f;
+.cta-section {
+  background: #264653;
   color: white;
-  text-align: center;
   padding: 40px 20px;
+  text-align: center;
 }
 
-.call-to-action h2 {
-  font-size: 2.4em;
-  font-weight: 700;
-  margin-bottom: 20px;
-}
-
-.call-to-action p {
-  font-size: 1.2em;
-  margin-bottom: 30px;
-}
-
-.call-to-action .btn {
+.cta-section .btn {
   background: #e76f51;
+  padding: 12px 30px;
   color: white;
-  padding: 10px 25px;
-  font-size: 1em;
   text-decoration: none;
   border-radius: 5px;
-  transition: all 0.3s ease;
 }
 
-.call-to-action .btn:hover {
+.cta-section .btn:hover {
   background: #d3543d;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .topics {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .topic-card {
-    width: 100%;
-    margin-bottom: 20px;
-  }
 }
 </style>

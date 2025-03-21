@@ -1,16 +1,16 @@
 header:
   - titles:
-      en: &EN About
+      en: &EN Behind the Science
     url: /about/
   - titles:
-      en: &EN Resources
+      en: &EN Knowledge Hub
     url: /resources/
   - titles:
-      en: &EN Case Studies
+      en: &EN Cancer Stories
     url: /case-studies/
   - titles:
-      en: &EN Interactive Tools
+      en: &EN Playground
     url: /interactive-tools/
   - titles:
-      en: &EN Blog
+      en: &EN "Curator's Blog"
     url: /blog/

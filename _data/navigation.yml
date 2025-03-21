@@ -1,8 +1,5 @@
 header:
   - titles:
-      en: &EN Home
-    url: /
-  - titles:
       en: &EN About
     url: /about/
   - titles:

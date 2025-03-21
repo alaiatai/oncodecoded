@@ -60,36 +60,35 @@ permalink: /
 body {
   font-family: 'Work Sans', sans-serif;
   margin: 0;
-  padding: 0;
-  box-sizing: border-box;
   background: #FAF9F6;
   color: #212529;
+  overflow-x: hidden;
 }
 
 h1, h2, h3 {
   font-family: 'Fira Code', monospace;
 }
 
-/* Full-Height Section */
-section {
-  padding: 60px 20px;
-}
-
+/* Hero Section */
 .hero {
   position: relative;
-  min-height: 100vh;
+  height: 100vh;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  text-align: center;
   background: linear-gradient(135deg, #3A0CA3, #4361EE);
   color: white;
   overflow: hidden;
 }
 
+.hero-content {
+  z-index: 1;
+  text-align: center;
+  padding: 20px;
+}
+
 .hero-content h1 {
-  font-size: 2.5rem;
+  font-size: 3rem;
   margin-bottom: 20px;
 }
 
@@ -121,17 +120,11 @@ section {
   z-index: 0;
 }
 
-/* Container */
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
 /* Intro Section */
 .intro {
-  background: white;
+  padding: 80px 20px;
   text-align: center;
+  background: white;
 }
 
 .intro h2 {
@@ -140,8 +133,8 @@ section {
 }
 
 .intro p {
-  font-size: 1.1rem;
-  max-width: 700px;
+  font-size: 1rem;
+  max-width: 600px;
   margin: 0 auto;
 }
 
@@ -149,9 +142,10 @@ section {
 .highlights {
   display: flex;
   flex-wrap: wrap;
-  gap: 30px;
-  justify-content: center;
+  gap: 20px;
+  padding: 50px 20px;
   background: #F1F5FF;
+  justify-content: center;
 }
 
 .highlight {
@@ -159,8 +153,8 @@ section {
   padding: 20px;
   border-radius: 10px;
   width: 300px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   text-align: center;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
 }
 
@@ -169,13 +163,13 @@ section {
 }
 
 .highlight img {
-  width: 60px;
-  margin-bottom: 20px;
+  width: 50px;
+  margin-bottom: 15px;
 }
 
 .highlight h3 {
   font-size: 1.5rem;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 
 .highlight p {
@@ -184,25 +178,26 @@ section {
 
 .highlight .link {
   color: #4361EE;
-  font-weight: 600;
   text-decoration: none;
+  font-weight: 600;
 }
 
-/* Call-to-Action Section */
+/* Call to Action */
 .cta {
   text-align: center;
+  padding: 50px 20px;
   background: linear-gradient(135deg, #4361EE, #3A0CA3);
   color: white;
 }
 
 .cta h2 {
-  font-size: 2rem;
+  font-size: 2.5rem;
   margin-bottom: 20px;
 }
 
 .cta p {
   font-size: 1.2rem;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .cta .btn-accent {
@@ -216,16 +211,6 @@ section {
 
 .cta .btn-accent:hover {
   background: #D4166D;
-}
-
-@media (max-width: 768px) {
-  .hero-content h1 {
-    font-size: 2rem;
-  }
-  .highlights {
-    flex-direction: column;
-    align-items: center;
-  }
 }
 </style>
 
@@ -246,8 +231,13 @@ section {
   const lines = [];
   let angle = 0;
 
+  // Generate DNA nodes and connections
   for (let i = 0; i < 40; i++) {
-    particles.push({ x: 0, y: 0, z: i * 20 });
+    particles.push({
+      x: 0,
+      y: 0,
+      z: i * 20,
+    });
     if (i > 0) {
       lines.push([i - 1, i]);
     }
@@ -272,6 +262,7 @@ section {
       if (p.z < -300) p.z = 800;
     });
 
+    // Draw connecting lines
     lines.forEach(([a, b]) => {
       const pa = particles[a];
       const pb = particles[b];

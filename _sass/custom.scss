@@ -1,3 +1,14 @@
 /* start custom scss snippet */
+---
+---
+@import "theme"; /* Keep existing imports if any */
+
+.hero {
+  background: linear-gradient(to bottom, #222, #555);
+}
+
+.btn-primary {
+  background-color: #ff9800;
+}
 
 /* end custom scss snippet */

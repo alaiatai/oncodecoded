@@ -203,7 +203,8 @@ collections:
     output: true
     permalink: /:path/
 
-include: ["_pages"]
+include: ["_pages", "_sass", "assets/css"]
+
 
 header_pages:
   - index.md

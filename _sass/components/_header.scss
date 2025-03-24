@@ -4,9 +4,6 @@
     font-weight: map-get($base, font-weight);
     text-decoration: none !important;
     @include link-colors($header-text-color, $main-color-1);
-    position: relative;
-    z-index: 10; /* Ensures it appears above the hero section */
-    background: rgba(0, 0, 0, 0.8); /* Adds slight transparency */
   }
   .main {
     @include flexbox();

@@ -1,11 +1,7 @@
 /* start custom scss snippet */
 
 .hero {
-  background: linear-gradient(to bottom, #222, #555) !important;
-  min-height: calc(100vh - 120px) !important;
-  height: auto !important; /* Ensures it doesn't default to 100vh */
-  padding-top: 60px !important; /* Prevents content from hiding under header */
-  padding-bottom: 60px !important; /* Ensures footer is visible */
+  background: linear-gradient(to bottom, #222, #555);
 }
 
 .btn-primary {

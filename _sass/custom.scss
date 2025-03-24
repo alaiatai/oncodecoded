@@ -3,8 +3,9 @@
 .hero {
   background: linear-gradient(to bottom, #222, #555) !important;
   min-height: calc(100vh - 120px) !important;
-  padding-top: 60px !important;
-  padding-bottom: 60px !important;
+  height: auto !important; /* Ensures it doesn't default to 100vh */
+  padding-top: 60px !important; /* Prevents content from hiding under header */
+  padding-bottom: 60px !important; /* Ensures footer is visible */
 }
 
 .btn-primary {

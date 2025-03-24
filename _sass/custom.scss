@@ -1,7 +1,24 @@
 /* start custom scss snippet */
 
 .hero {
-  background: linear-gradient(to bottom, #222, #555);
+  position: relative;
+  width: 100%;
+  min-height: 100vh; /* Ensures it fits within the viewport */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to bottom, #000428, #004e92);
+  color: white;
+  text-align: center;
+  padding-top: 60px; /* Adjust if needed to prevent overlap with header */
+}
+
+footer {
+  position: relative;
+  z-index: 5; /* Ensures it stays above background layers */
+  background: #222; /* Adjust background if necessary */
+  padding: 20px;
+  text-align: center;
 }
 
 .btn-primary {

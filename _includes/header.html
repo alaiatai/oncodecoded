@@ -6,25 +6,19 @@
   <header class="header" {%- if include.background -%} style="background: {{ include.background }};" {%- endif -%}>
 {%- endif -%}
     <div class="main">
-      <!-- Brand and Title -->
       <div class="header__title">
         <div class="header__brand">
           {%- include svg/logo.svg -%}
-          {%- assign _paths_root = site.paths.root | default: site.data.variables.default.paths.root -%}
+          {%- assign _paths_root = site.paths.root | default: site.data.variables.default.paths.root  -%}
           {%- include snippets/get-nav-url.html path=_paths_root -%}
           {%- if site.title -%}
             <a title="{%- if site.description -%}{{ site.description }}{%- endif -%}" href="{{ __return }}">{{ site.title }}</a>
           {%- endif -%}
         </div>
-        <!-- Search Button -->
         {%- if site.search.provider -%}
-          <button class="button button--secondary button--circle search-button js-search-toggle">
-            <i class="fas fa-search"></i>
-          </button>
+          <button class="button button--secondary button--circle search-button js-search-toggle"><i class="fas fa-search"></i></button>
         {%- endif -%}
       </div>
-
-      <!-- Navigation Menu -->
       {%- if site.data.navigation.header -%}
       <nav class="navigation">
         <ul>
@@ -34,31 +28,14 @@
             {%- include snippets/get-nav-url.html path=page.url -%}
             {%- assign _page_url = __return -%}
             {%- include snippets/get-string-from-locale-config.html locale=_item.titles -%}
-
-            <!-- Active Navigation Item -->
             {%- if _nav_url == _page_url or page.nav_key and _item.key and page.nav_key == _item.key -%}
-              <li class="navigation__item navigation__item--active">
-                <a href="{{ _nav_url }}">
-                  {%- if _item.title -%}{{ _item.title }}{%- else -%}{{ __return }}{%- endif -%}
-                </a>
-              </li>
+              <li class="navigation__item navigation__item--active"><a href="{{ _nav_url }}">{%- if _item.title -%}{{ _item.title }}{%- else -%}{{ __return }}{%- endif -%}</a></li>
             {%- else -%}
-              <!-- Standard Navigation Item -->
-              <li class="navigation__item">
-                <a href="{{ _nav_url }}">
-                  {%- if _item.title -%}{{ _item.title }}{%- else -%}{{ __return }}{%- endif -%}
-                </a>
-              </li>
+              <li class="navigation__item"><a href="{{ _nav_url }}">{%- if _item.title -%}{{ _item.title }}{%- else -%}{{ __return }}{%- endif -%}</a></li>
             {%- endif -%}
           {%- endfor -%}
-
-          <!-- Additional Search Button -->
           {%- if site.search.provider -%}
-            <li>
-              <button class="button button--secondary button--circle search-button js-search-toggle">
-                <i class="fas fa-search"></i>
-              </button>
-            </li>
+            <li><button class="button button--secondary button--circle search-button js-search-toggle"><i class="fas fa-search"></i></button></li>
           {%- endif -%}
         </ul>
       </nav>

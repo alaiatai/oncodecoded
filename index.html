@@ -74,14 +74,18 @@ h1, h2, h3 {
 /* Hero Section */
 .hero {
   position: relative;
+  min-height: calc(100vh - 120px);
   height: 100%;
   width: 100%;
+  padding-top: 80px; /* Make sure content doesn't get hidden under the header */
+  padding-bottom: 60px; /* Ensure footer visibility */
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(135deg, #3A0CA3, #4361EE);
+  background: linear-gradient(to bottom, #3A0CA3, #4361EE);
   color: white;
   overflow: hidden;
+
 }
 
 .hero-content {
